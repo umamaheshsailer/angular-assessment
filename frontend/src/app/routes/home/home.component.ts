@@ -24,9 +24,10 @@ constructor(private userservice:UserloginService){
       url:new FormControl(),
     })
   }
-  assignvideo(i:any){
-this.videourl = i.value.url
-this.videoid = i.value.id
+  assignvideo(video: any){
+    console.log(video)
+this.videourl = video.value.url
+this.videoid = video.value.id
   }
 
 
