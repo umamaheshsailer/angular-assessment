@@ -66,7 +66,7 @@ postVideos(data:any){
 postBookmark(timestamp: string,videoid:string) {
   const token = localStorage.getItem('token');
   const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-  this.http.post<{ videos: Video[] }>('http://localhost:3000/api/videos/bookmarks',videoid, { headers }).subscribe(resp=>{
+  this.http.post<{ videos: Video[] }>('http://localhost:3000/api/videos/bookmarks/'+videoid, {timestamp} ,{ headers }).subscribe(resp=>{
     console.log(resp)
   }
 )}

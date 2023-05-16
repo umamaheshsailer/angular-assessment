@@ -8,10 +8,11 @@ import { HomeComponent } from './routes/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, SignupComponent],
-  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule,HttpClientModule,CommonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
